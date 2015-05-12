@@ -8,15 +8,18 @@ storage:
     cache:
         layerinfo: inmemory
     filesystem:
-        rootdirectory: /tmp/registry-dev
+        rootdirectory: /DockerRepo
     maintenance:
         uploadpurging:
             enabled: false
 http:
     addr: :5000
-    secret: asecretforlocaldevelopment
+    secret: developmentintheair
     debug:
         addr: localhost:5001
+#    tls:
+#        certificate: /go/src/github.com/docker/distribution/certs/host.crt
+#        key: /go/src/github.com/docker/distribution/certs/host.key
 redis:
   addr: localhost:6379
   pool:
